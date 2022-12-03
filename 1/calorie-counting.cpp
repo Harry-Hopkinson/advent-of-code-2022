@@ -31,5 +31,6 @@ int main()
   std::sort(inventory.begin(), inventory.end(), std::greater<int>());
   int value{};
   std::cout << "Max: " << inventory[0] << "\n";
-  std::cout << std::accumulate(inventory.begin(), inventory.begin() + 3, 0);
+  std::cout << std::accumulate(inventory.begin(), inventory.begin() + 3, 0) << "\n";
+  system("pause");
 }
