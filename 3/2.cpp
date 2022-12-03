@@ -21,8 +21,6 @@ int main(int argc, char *argv[])
   std::fill(std::begin(counter), std::end(counter), 0);
   while (std::getline(file, line))
   {
-    // Account for CRLF if required
-    // line.erase(std::remove_if(std::begin(line), std::end(line), [](auto c) { return !isprint(c); }), std::end(line));
     std::sort(std::begin(line), std::end(line));
     line.erase(std::unique(std::begin(line), std::end(line)), std::end(line));
     for (const auto c : line)
